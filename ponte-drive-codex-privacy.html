@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Política de Privacidade da Ponte Drive-Codex, aplicativo pessoal de acesso ao Google Drive via rclone.">
+  <meta name="robots" content="index,follow">
+  <title>Política de Privacidade | Ponte Drive-Codex</title>
+  <style>
+    :root { color-scheme: light; --ink:#17243a; --muted:#536277; --line:#dce4ef; --panel:#f4f7fb; --link:#155eaf; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:white; color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; }
+    .container { max-width:780px; margin:auto; padding:40px 24px 68px; }
+    .eyebrow { color:var(--muted); font-size:13px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; }
+    h1 { margin:6px 0 12px; font-size:clamp(30px,5vw,40px); line-height:1.2; letter-spacing:-.025em; }
+    h2 { margin:30px 0 7px; font-size:20px; line-height:1.35; }
+    p { margin:11px 0; }
+    a { color:var(--link); text-underline-offset:3px; }
+    .lead { color:var(--muted); font-size:17px; }
+    .panel { margin:22px 0; padding:16px 20px; background:var(--panel); border:1px solid var(--line); border-radius:12px; }
+    ul { padding-left:24px; }
+    li { margin:7px 0; }
+    footer { margin-top:44px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="eyebrow">Ponte Drive-Codex · Privacidade</div>
+    <h1>Política de Privacidade</h1>
+    <p class="lead">Esta política explica o tratamento dos dados do Google Drive no aplicativo OAuth pessoal <strong>Ponte Drive-Codex</strong>, utilizado pelo proprietário com o rclone, ChatGPT e Codex CLI.</p>
+
+    <h2>1. Natureza e finalidade do aplicativo</h2>
+    <p>A Ponte Drive-Codex é uma integração privada, não comercial, operada pelo próprio proprietário. Sua finalidade é transferir tarefas e resultados por uma pasta compartilhada do Google Drive entre o ChatGPT e um executor local no computador local autorizado, que pode acionar o Codex CLI mediante permissões configuradas pelo proprietário.</p>
+
+    <h2>2. Dados acessados</h2>
+    <p>Mediante autorização expressa da conta Google, o rclone pode acessar arquivos, pastas e metadados do Google Drive, inclusive nomes, identificadores, conteúdo e informações necessárias às transferências. As tarefas podem conter instruções, trechos de texto e resultados de processamento.</p>
+    <div class="panel">
+      <strong>Alcance da autorização:</strong> o escopo OAuth <code>https://www.googleapis.com/auth/drive</code> permite acesso amplo ao Drive da conta autorizada, incluindo operações de leitura, criação, alteração, organização e exclusão conforme as permissões concedidas. A escolha de uma pasta raiz no rclone delimita o uso operacional, mas não reduz o alcance desse escopo OAuth. Por isso, a ponte utiliza uma conta Google dedicada.
+    </div>
+
+    <h2>3. Como os dados são utilizados</h2>
+    <p>Os dados são utilizados exclusivamente para receber instruções autorizadas, validar tarefas e projetos, transportar arquivos e registrar resultados ou diagnósticos relativos ao funcionamento da ponte. Não há finalidade publicitária, revenda de informações ou criação de perfis comerciais.</p>
+
+    <h2>4. Onde os dados são armazenados</h2>
+    <p>As tarefas e os resultados ficam armazenados no Google Drive enquanto permanecerem nos diretórios utilizados pela ponte. No computador local autorizado, o executor e o rclone podem manter configurações, tokens OAuth, arquivos temporários, resultados e registros locais necessários às operações. Os tokens do rclone são mantidos na configuração local protegida pelo controle de acesso do computador.</p>
+    <p>A Ponte Drive-Codex não dispõe de servidor próprio para hospedar ou coletar o conteúdo transferido. Estas páginas públicas são informativas e não recebem tarefas, arquivos do Drive nem credenciais OAuth.</p>
+
+    <h2>5. Compartilhamento e processamento por terceiros</h2>
+    <p>O Google Drive armazena e disponibiliza as tarefas e os resultados de acordo com as permissões da pasta e da conta autorizada. Conforme a tarefa, instruções e resultados também podem ser enviados aos serviços da OpenAI — como ChatGPT e Codex — para processamento solicitado pelo proprietário. Esses provedores processam dados segundo seus respectivos termos e políticas.</p>
+    <p>O proprietário não vende dados, não os utiliza para publicidade e não os disponibiliza comercialmente a terceiros. O uso dos serviços mencionados não significa publicação aberta dos arquivos no Drive.</p>
+
+    <h2>6. Retenção e exclusão</h2>
+    <p>Os arquivos da ponte permanecem no Google Drive e no computador até serem removidos pelo proprietário ou por rotinas que ele venha a configurar. Não é prometido prazo automático de exclusão. A exclusão de arquivos locais ou do Drive é distinta de eventuais períodos de retenção próprios do Google e da OpenAI.</p>
+
+    <h2>7. Segurança</h2>
+    <p>O acesso ao Drive exige consentimento OAuth. O proprietário utiliza conta dedicada, configurações locais e permissões por projeto para reduzir o risco de acesso indevido. Essas medidas não eliminam completamente os riscos inerentes ao uso de serviços conectados. As credenciais não são publicadas neste site.</p>
+
+    <h2>8. Controle e revogação</h2>
+    <p>O proprietário pode interromper a integração, remover tarefas e respostas armazenadas sob seu controle e revogar o acesso OAuth em <a href="https://myaccount.google.com/connections" rel="noopener noreferrer">Conexões com terceiros da Conta Google</a>. A revogação impede novas operações autorizadas pelo token revogado, mas não apaga automaticamente arquivos já transferidos ou cópias mantidas por outros serviços.</p>
+
+    <h2>9. Contato e atualizações</h2>
+    <p>Para questões relacionadas à integração, utilize o e-mail de suporte exibido na tela de consentimento OAuth da Ponte Drive-Codex. Esta política poderá ser atualizada quando houver mudanças efetivas na forma de funcionamento ou tratamento de dados.</p>
+
+    <footer>
+      <p>Atualizada em 14/10/2026 · <a href="ponte-drive-codex.html">Voltar à página inicial da Ponte Drive-Codex</a></p>
+    </footer>
+  </main>
+</body>
+</html>

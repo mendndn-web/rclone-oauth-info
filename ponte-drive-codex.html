@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Informações sobre Ponte Drive-Codex: integração pessoal entre rclone, Google Drive, ChatGPT e Codex CLI, com operação controlada pelo proprietário.">
+  <meta name="robots" content="index,follow">
+  <title>Ponte Drive-Codex | Aplicativo OAuth pessoal</title>
+  <style>
+    :root { color-scheme: light; --ink:#17243a; --muted:#536277; --line:#dce4ef; --panel:#f4f7fb; --link:#155eaf; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:white; color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; }
+    .container { max-width:780px; margin:auto; padding:40px 24px 68px; }
+    .eyebrow { color:var(--muted); font-size:13px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; }
+    h1 { margin:6px 0 12px; font-size:clamp(30px,5vw,42px); line-height:1.2; letter-spacing:-.025em; }
+    h2 { margin:32px 0 8px; font-size:21px; line-height:1.35; }
+    p { margin:12px 0; }
+    a { color:var(--link); text-underline-offset:3px; }
+    .lead { color:var(--muted); font-size:18px; max-width:65ch; }
+    .panel { margin:25px 0; padding:18px 20px; background:var(--panel); border:1px solid var(--line); border-radius:12px; }
+    ul { padding-left:24px; }
+    li { margin:7px 0; }
+    footer { margin-top:44px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="eyebrow">Integração pessoal · OAuth Google Drive</div>
+    <h1>Ponte Drive-Codex</h1>
+    <p class="lead">Aplicativo OAuth de uso pessoal que permite ao proprietário usar o <strong>rclone</strong> para transportar tarefas e resultados por uma pasta do Google Drive entre o <strong>ChatGPT</strong> e o <strong>Codex CLI</strong> no computador local autorizado.</p>
+
+    <div class="panel">
+      <strong>Uso restrito:</strong> esta integração não é oferecida como serviço público e não dispõe de cadastro para terceiros. As operações ocorrem somente após a autorização da conta Google utilizada pelo proprietário.
+    </div>
+
+    <h2>Como funciona</h2>
+    <ul>
+      <li>Uma tarefa é registrada em uma pasta autorizada do Google Drive.</li>
+      <li>O rclone no computador local autorizado lê a tarefa, e um executor local verifica as permissões e o projeto selecionado antes de acionar o Codex CLI.</li>
+      <li>Os resultados podem ser gravados na mesma pasta de trabalho do Drive e consultados posteriormente pelo proprietário, inclusive pelo ChatGPT quando este tiver conexão autorizada.</li>
+      <li>As configurações de projetos e as políticas de segurança são gerenciadas localmente pelo proprietário.</li>
+    </ul>
+
+    <h2>Permissões solicitadas</h2>
+    <p>O aplicativo utiliza o escopo OAuth <code>https://www.googleapis.com/auth/drive</code>, que permite acesso amplo aos arquivos e pastas <strong>da conta Google autorizada</strong>. Embora o rclone esteja configurado operacionalmente para utilizar uma pasta específica, essa configuração <strong>não limita tecnicamente a permissão OAuth</strong>. Por esse motivo, utiliza-se uma conta dedicada à ponte.</p>
+
+    <h2>Privacidade e serviços envolvidos</h2>
+    <p>A ponte utiliza os serviços do Google Drive para transportar e armazenar tarefas e respostas. Dependendo da operação solicitada, o conteúdo das tarefas e das respostas poderá ser processado pelos serviços da OpenAI, como ChatGPT e Codex. O aplicativo não possui servidor próprio para receber o conteúdo dos arquivos do Drive.</p>
+    <p>Consulte a <a href="ponte-drive-codex-privacy.html">Política de Privacidade da Ponte Drive-Codex</a> para detalhes sobre acesso, uso, armazenamento, compartilhamento e revogação da autorização.</p>
+
+    <h2>Contato</h2>
+    <p>Para assuntos relacionados a esta integração, utilize o endereço de suporte informado na tela de consentimento OAuth do aplicativo.</p>
+
+    <footer>
+      <p>Ponte Drive-Codex · Aplicativo pessoal, sem oferta comercial · Atualizado em 14/10/2026</p>
+      <p><a href="ponte-drive-codex-privacy.html">Política de Privacidade</a></p>
+    </footer>
+  </main>
+</body>
+</html>
